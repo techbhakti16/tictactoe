@@ -29,10 +29,10 @@ const checkWin= ()=>{
 
 }
 let boxes=document.getElementsByClassName("box");
-Array.from(boxes).forEach(element =>{
-    let boxtext=document.querySelectorAll('.boxtext');
+Array.from(boxes).forEach((element,i) =>{
+    let boxtext=document.querySelectorAll('.boxtext')[i];
     element.addEventListener('click',()=>{
-        if(boxtext.innerText===" "){
+        if(boxtext.innerText===""){
             boxtext.innerText= turn;
             turn=changeTurn();
             checkWin();
